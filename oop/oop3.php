@@ -6,11 +6,11 @@ class kucing
     //membuat property atau atributes
     public $warna;
 
-    //construct adlah method khusus yangakan
+     //construct adlah method khusus yangakan
     //dipanggil pertama kali
-    public function __construct($warna)
+                public function __construct($warna)
     {
-        $this -> warna = $warna;
+                   $this -> warna = $warna;
     }
     //membuat method (behaviour / perilaku)
     public function bersuara()

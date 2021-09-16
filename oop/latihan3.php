@@ -21,48 +21,49 @@
  </fieldset>
 </form>
    </body>
-</html> 
+</html>
 
 <?php
-if(isset($_POST['input'])){
-  $bil1=$_POST['bil1'];
-  $bil2=$_POST['bil2'];
+if (isset($_POST['input'])) {
+    $bil1 = $_POST['bil1'];
+    $bil2 = $_POST['bil2'];
 
-class aritmatika{
+    class aritmatika
+    {
 
-    public function __construct($bil1, $bil2)
-    {
-         $this->bil1 =$bil1;
-         $this->bil2= $bil2;
+        public function __construct($bil1, $bil2)
+        {
+            $this->bil1 = $bil1;
+            $this->bil2 = $bil2;
+        }
+        public function penjumlahan()
+        {
+            return ($this->bil1 + $this->bil2);
+        }
+        public function pengurangan()
+        {
+            return ($this->bil1 - $this->bil2);
+        }
+        public function perkalian()
+        {
+            return ($this->bil1 * $this->bil2);
+        }
+        public function pembagian()
+        {
+            return ($this->bil1 / $this->bil2);
+        }
+        public function sisabagi()
+        {
+            return ($this->bil1 % $this->bil2);
+        }
     }
-    public function penjumlahan()
-    {
-        return ($this->bil1 +  $this->bil2);
-    }
-    public function pengurangan()
-    {
-        return ($this->bil1 - $this->bil2);
-    }
-    public function perkalian()
-    {
-        return ($this->bil1 * $this->bil2);
-    }
-    public function pembagian()
-    {
-        return ($this->bil1 / $this->bil2);
-    }
-    public function sisabagi()
-    {
-        return ($this->bil1 % $this->bil2);
-    }
-}
 
-$hasil = new aritmatika($bil1, $bil2);
-echo "penjumlahan dari $bil1 + $bil2 = <b>".$hasil->penjumlahan(). "</b><br>";
-echo "pengurangan dari $bil1 - $bil2 = <b>".$hasil->pengurangan(). "</b><br>";
-echo "perkalian dari $bil1 x $bil2 = <b>".$hasil->perkalian(). "</b><br>";
-echo "pembagian dari $bil1 / $bil2 = <b>".$hasil->pembagian(). "</b><br>";
-echo "sisa bagi dari $bil1 % $bil2 = <b>".$hasil->sisabagi(). "</b><br>";
+    $hasil = new aritmatika($bil1, $bil2);
+    echo "Penjumlahan dari $bil1 + $bil2 = <b>" . $hasil->penjumlahan() . "</b><br>";
+    echo "Pengurangan dari $bil1 - $bil2 = <b>" . $hasil->pengurangan() . "</b><br>";
+    echo "Perkalian dari $bil1 x $bil2 = <b>" . $hasil->perkalian() . "</b><br>";
+    echo "Pembagian dari $bil1 / $bil2 = <b>" . $hasil->pembagian() . "</b><br>";
+    echo "Sisa bagi dari $bil1 % $bil2 = <b>" . $hasil->sisabagi() . "</b><br>";
 }
 
 ?>

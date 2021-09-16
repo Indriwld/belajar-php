@@ -26,4 +26,4 @@ jenis kelamin:
 <input type ="submit" name ="input" value= "input">
 </form>
 </body>
-</html>       
+</html>
