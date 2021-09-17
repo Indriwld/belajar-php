@@ -17,7 +17,7 @@
            <td>
 
         <select name="" id="" name= "jenis mahkluk">
-        <option value ="manusia">manusia  /option>
+        <option value ="manusia">manusia</option>
         <option value ="jin">jin</option>
         <option value ="malaikat">malaikat</option>
         <option value ="setan">setan</option>
@@ -41,34 +41,37 @@
 if (isset($_POST['submit'])) {
     $jenis = $_POST['jenis'];
 
-    class jenis
+    class jenismahluk
     {
+        public $jenis;
+
         public function __construct($a)
         {
             $this->jenis = $a;
         }
 
     }
-    class manusia extends mahluk
+    class mahluk extends jenismahluk
     {
-        public function tugas()
+        public function tugasmahluk()
         {
-
+            if ($this->jenis = "manusia") {
+                $tugas = "beribadah kepada tuhan";
+            } else if ($this->jenis = "malaikat") {
+                $tugas = "beribadah kepada tuhan";
+            } else if ($this->jenis = "jin") {
+                $tugas = "mengoda manusia";
+            } else {
+                $tugas = "mengganggu manusia";
+            }
+            return $tugas;
         }
     }
-    class setan extends mahluk
-    {
-        public function tugas()
-        {
+    $mahluk = new mahluk($jenis);
 
-        }
-    }
-    class jin extends mahluk
-    {
-        public function tugas()
-        {
-
-        }
-    }
-
+    echo "jenis mahluk:" . $mahluk->jenis . "<br>";
+    echo "sifat mahkluk tersebut :" . $mahluk->tugasmahluk();
 }
+?>
+
+
